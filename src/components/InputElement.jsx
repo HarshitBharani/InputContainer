@@ -1,7 +1,6 @@
 import styles from "./inputBox.module.css";
 
 export const InputElement = ({ setData, id, name }) => {
-  console.log(name);
   const updateName = (e) => {
     setData((prevstate) =>
       prevstate.map((data, dataId) =>
@@ -14,7 +13,6 @@ export const InputElement = ({ setData, id, name }) => {
     }
     setData((prevstate) =>
       prevstate.map((data, dataId) => {
-        console.log(prevstate);
         return dataId === id ? { ...data, type: e.target.value } : data;
       })
     );

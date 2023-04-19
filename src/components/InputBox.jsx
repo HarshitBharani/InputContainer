@@ -11,7 +11,7 @@ export const InputBox = ({ item, id, setData }) => {
         dataId === id ? { ...data, child: child } : data
       )
     );
-  }, [setData, child, item.id]);
+  }, [setData, child, item.id, id]);
 
   return (
     <section className={styles.section}>
@@ -27,7 +27,7 @@ export const InputBox = ({ item, id, setData }) => {
 
         {item.type === "OBJECT"
           ? child.map((child, id) => (
-              <InputBox item={child} id={id} setData={setChild} />
+              <InputBox key={id} item={child} id={id} setData={setChild} />
             ))
           : ""}
       </div>

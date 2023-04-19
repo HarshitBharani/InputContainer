@@ -1,6 +1,7 @@
 .inputBox {
   position: relative;
   margin-left: 20px;
+  gap: 1rem;
 }
 .section {
   width: 100%;
@@ -16,9 +17,8 @@
 }
 
 .buttonsContainer {
-  display: flex;
-  align-items: center;
   /* display: none; */
+
   position: absolute;
   top: 0px;
   right: 0px;
@@ -33,14 +33,15 @@
   padding-top: 5px;
 }
 .section:hover .buttonsContainer {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .required {
   display: flex;
   align-items: center;
 }
 .requiredText {
-  display: inline-block;
+  caret-color: transparent;
 }
 .requiredButton {
   display: none;

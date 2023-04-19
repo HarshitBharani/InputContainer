@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { InputBox } from "./components/InputBox";
 
 function App() {
   const [data, setData] = useState([]);
   const printData = () => {
-    console.log(data);
+    console.table(data);
   };
   const AddField = () => {
     setData((prevData) => [
@@ -24,7 +24,7 @@ function App() {
         </div>
 
         {data.map((item, id) => (
-          <div style={{ display: "flex" }}>
+          <div key={id} style={{ display: "flex" }}>
             <span>{id}</span>
             <InputBox item={item} setData={setData} id={id} />
           </div>

@@ -4,7 +4,6 @@ import deleteImage from "../images/delete.png";
 import classnames from "classnames";
 
 export const ButtonContainer = ({ setData, setChild, type, id, item }) => {
-  console.log(item);
   const toggleRequired = () => {
     setData((prevstate) =>
       prevstate.map((data, dataId) =>
