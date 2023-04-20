@@ -4,7 +4,7 @@
   gap: 1rem;
 }
 .section {
-  width: 100%;
+  min-width: 90%;
 }
 .number {
   color: lightgray;
@@ -17,7 +17,7 @@
 }
 
 .buttonsContainer {
-  /* display: none; */
+  display: none;
 
   position: absolute;
   top: 0px;
@@ -32,7 +32,7 @@
   background-color: white;
   padding-top: 5px;
 }
-.section:hover .buttonsContainer {
+.hoverClass:hover .buttonsContainer {
   display: flex;
   align-items: center;
 }

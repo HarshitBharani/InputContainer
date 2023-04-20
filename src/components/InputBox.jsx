@@ -11,20 +11,21 @@ export const InputBox = ({ item, id, setData }) => {
         dataId === id ? { ...data, child: child } : data
       )
     );
-  }, [setData, child, item.id, id]);
+  }, [setData, child, id]);
 
   return (
     <section className={styles.section}>
       <div className={styles.inputBox}>
-        <InputElement setData={setData} id={id} name={item.name} />
-        <ButtonContainer
-          setChild={setChild}
-          setData={setData}
-          id={id}
-          item={item}
-        />
-        <hr></hr>
-
+        <div className={styles.hoverClass}>
+          <InputElement setData={setData} id={id} name={item.name} />
+          <ButtonContainer
+            setChild={setChild}
+            setData={setData}
+            id={id}
+            item={item}
+          />
+          <hr></hr>
+        </div>
         {item.type === "OBJECT"
           ? child.map((child, id) => (
               <InputBox key={id} item={child} id={id} setData={setChild} />
