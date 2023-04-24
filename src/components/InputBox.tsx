@@ -2,11 +2,17 @@ import { useEffect, useState } from "react";
 import styles from "./inputBox.module.css";
 import { ButtonContainer } from "./ButtonContainer";
 import { InputElement } from "./InputElement";
-
-export const InputBox = ({ item, id, setData }) => {
+import { dataType } from "../App";
+import React from "react";
+interface inputBoxProps {
+  item: dataType;
+  id: number;
+  setData: Function;
+}
+export const InputBox = ({ item, id, setData }: inputBoxProps) => {
   const [child, setChild] = useState([]);
   useEffect(() => {
-    setData((prevstate) =>
+    setData((prevstate: dataType[]) =>
       prevstate.map((data, dataId) =>
         dataId === id ? { ...data, child: child } : data
       )
