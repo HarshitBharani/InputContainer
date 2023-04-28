@@ -4,9 +4,9 @@ import deleteImage from "../images/delete.png";
 import classnames from "classnames";
 import React from "react";
 type buttonProps = {
-  setData: any;
-  setChild: any;
-  id: any;
+  setData: Function;
+  setChild: Function;
+  id: number;
   item: any;
 };
 export const ButtonContainer = ({
